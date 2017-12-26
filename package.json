@@ -1,0 +1,45 @@
+{
+  "name": "mte",
+  "version": "0.1.7",
+  "description": "mitouch template engine",
+  "preferGlobal": true,
+  "bin": {
+    "mte": "bin/mte.js",
+    "mte-init": "bin/mte-init.js",
+    "mte-create": "bin/mte-create.js",
+    "mte-build": "bin/mte-build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elevenfloor/mte.git"
+  },
+  "main": "index.js",
+  "scripts": {},
+  "author": "11th floor",
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^2.1.0",
+    "autoprefixer": "^7.2.3",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-vue": "^2.0.0",
+    "browser-sync": "^2.18.13",
+    "chalk": "^2.3.0",
+    "commander": "^2.12.2",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "fontmin": "^0.9.6",
+    "fs-explorer-ui": "^1.0.8",
+    "fs-extra": "^5.0.0",
+    "git-clone": "^0.1.0",
+    "inquirer": "^4.0.1",
+    "log-symbols": "^2.1.0",
+    "node-sass": "^4.7.2",
+    "postcss": "^6.0.14",
+    "progress": "^2.0.0",
+    "resize-img": "^1.1.2",
+    "shelljs": "^0.7.8",
+    "webshot": "^0.18.0"
+  }
+}

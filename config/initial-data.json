@@ -1,0 +1,32 @@
+{
+  "developers": [
+    "Evgeniy Melnik",
+    "Eugene Zaykov",
+    "Igor Ivanov",
+    "Taras Serhiichuk",
+    "Vadim Dovgopol",
+    "Valeriy Artyukhov"
+  ],
+  "designers": [
+    "Asya Artyomova",
+    "Anton Kryzhanovskiy",
+    "Bogdan Kanilo",
+    "Pavel Karpushkin",
+    "Olena Dokiienko",
+    "Yulia Shevchuck",
+    "Daryna Skulska",
+    "Anastasiya Volkova",
+    "Galyna Spivak"
+  ],
+  "managers": [
+    "Anna Bilokon",
+    "Nataliia Kaiotkina",
+    "Oxana Kurichko",
+    "Aleksandra Voloshyna",
+    "Valeriya Zhigalyova",
+    "Mariia Poliakova"
+  ],
+  "cycle": ["C1", "C2"],
+  "years": ["17", "18", "19"],
+  "lang": ["RUS", "UKR"]
+}
