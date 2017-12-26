@@ -181,9 +181,9 @@ function createBundle() {
     const bundle = [];
     const bundleFile = path.resolve(paths.currAssets, 'js', 'core', 'bundle.js');
 
-    bundleScripts.forEach(script => {
-        bundle.push(fs.readFileSync(script, 'utf8'));
-    });
+    // bundleScripts.forEach(script => {
+    //     bundle.push(fs.readFileSync(script, 'utf8'));
+    // });
 
     // methods.mkFile(bundleFile, bundle.join('\n'));
     // concatenate

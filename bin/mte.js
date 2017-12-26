@@ -8,6 +8,7 @@ require('commander')
     .command('create', 'generate project')
     .command('dev', 'start dev-server')
     .command('build', 'generate ZIP for production')
+    .command('structure', 'operations with adding/removing slides')
     .command('copy', 'copy file/directory to all slides in your project')
     .command('font', 'convert fonts to "../assets/fonts" and connect it to "../global/style/fonts.scss"')
     .parse(process.argv);
