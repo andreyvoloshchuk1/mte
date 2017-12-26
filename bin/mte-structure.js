@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const chalk = require('chalk');
+const inquirer = require('inquirer');
 const commander = require('commander');
-const data = require('../config/initial-data');
 const structureChanger = require('../lib/structure-changer');
 
 /**
@@ -10,10 +10,10 @@ const structureChanger = require('../lib/structure-changer');
  */
 
 commander
-    .option('--add', 'Add slide')
-    .option('--flow   [flow]', 'Flow num')
-    .option('--slide  [slide]', 'Slide num')
-    .option('--filter [filter]', 'filter (only for lang)')
+    .option('add', 'Add slide')
+    .option('del', 'Delete slide')
+    .option('--flow   <flow>', 'Flow num')
+    .option('--slide  <slide>', 'Slide num')
     .parse(process.argv);
 
 /**
@@ -22,30 +22,43 @@ commander
 
 commander.on('--help', () => {
     console.log('\n  Examples:\n');
-    console.log(chalk.gray('    # add new slide to flow_2 on position 5'));
-    console.log('    $ mte add --flow 2 --slide 5\n');
-    console.log(chalk.gray('    # add new slide to flow_1 on position 3 only in UKR slides'));
-    console.log('    $ mte add --flow 1 --slide 3 UKR');
+    console.log(chalk.gray('    # Add new slide in flow_2 on position 5'));
+    console.log('    $ mte --add --flow 2 --slide 5\n');
+    console.log(chalk.gray('    # Delete new slide in flow_1 on position 3'));
+    console.log('    $ mte --del --flow 1 --slide 3');
 });
 
-function help() {
-    commander.parse(process.argv);
-    if (commander.args.length > 1) return commander.help()
-}
-
-help();
+if (commander.args.length > 1) return commander.help();
 
 
 /**
- * Understand command
+ * Add
  */
 
-const flow = commander.flow || commander.args[1];
-const slide = commander.slide || commander.args[2];
-const filter = commander.filter || commander.args[3];
+// Get Slide Name
+if (commander.add) {
+    inquirer.prompt({
+        type: 'input',
+        name: 'name',
+        message: 'Slide name:'
+    }).then(slide => {
+        if (commander.slide === '1') {
+            inquirer.prompt({
+                type: 'input',
+                name: 'name',
+                message: `You wont add slide on 1-st position, write Flow-${commander.flow} name:`
+            }).then(flow => {
+                new structureChanger(commander.flow, commander.slide, 'add', slide.name, flow.name);
+            })
+        } else {
+            new structureChanger(commander.flow, commander.slide, 'add', slide.name);
+        }
+    })
+}
 
-if (data.lang.indexOf(filter) === -1)
-    return console.log(chalk.red('Wrong filter, use only LANG filters:'), chalk.green(data.lang));
+/**
+ * Delete
+ */
 
-if (commander.add) structureChanger.add(flow, slide, filter);
+if (commander.del) new structureChanger(commander.flow, commander.slide, 'del');
 

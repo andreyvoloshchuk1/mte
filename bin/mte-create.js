@@ -5,9 +5,9 @@ const path = require('path');
 const shell = require('shelljs');
 const inquirer = require('inquirer');
 const eachSlide = require('../lib/each-slide');
-const config = require('../lib/main');
 const FontsConverter = require('../lib/font-converter');
 const sassCompiler = require('../lib/sass-compiler');
+const config = require('../lib/main');
 
 const variables = config.variables;
 const methods = config.methods;
@@ -15,6 +15,7 @@ const paths = config.paths;
 const log = config.log;
 
 const projectData = require(path.resolve(paths.currentPath, variables.clmInfoFileName));
+const navigationData = require(path.resolve(paths.currentPath, variables.navDataFileName));
 const bundleScripts = require('../config/bundle.config');
 const slidesDirName = paths.slides;
 
@@ -229,7 +230,6 @@ function createData(slideDirPath, ID, lang, flowNum) {
     methods.mkDir(slideDirPath, 'data');
 
     /** Create Data Menu **/
-    const navigationData = require(path.resolve(paths.currentPath, variables.navDataFileName));
     const navigationDataPath = path.resolve(slideDirPath, 'data', 'data-menu.json');
 
     let dataMenuText = {};
