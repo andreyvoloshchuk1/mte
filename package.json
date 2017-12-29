@@ -1,6 +1,6 @@
 {
   "name": "mte",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "mitouch template engine",
   "preferGlobal": true,
   "bin": {

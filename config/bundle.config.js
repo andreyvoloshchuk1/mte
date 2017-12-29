@@ -4,8 +4,8 @@ const path = require('path');
 module.exports = [
 
     '/lib/jquery.js',
-    // '/lib/jquery-ui.min.js',
-    // '/lib/jquery.ui.touch-punch.js',
+    '/lib/jquery-ui.min.js',
+    '/lib/jquery.ui.touch-punch.js',
     '/lib/handlebars-v4.0.11.js',
     '/lib/swiper.min.js',
     '/core/template-loader.js',

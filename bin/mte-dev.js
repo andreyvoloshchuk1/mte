@@ -29,7 +29,7 @@ bs.init({
             fn: (event, file) => {
                 const directory = file.split('\\')[0];
                 const fileType = file.split('.').pop();
-                // console.log(event, file)
+                console.log(event, file)
 
                 /** 'slides' listener on change **/
                 if (directory === paths.slides && (event === 'change' || event === 'unlink')) {
@@ -81,7 +81,7 @@ function slidesListener(file, fileType) {
     /** JS **/
     if (fileType === 'js') {
         const outFile = file.replace('\\js\\scripts\\', '/js/').replace('.js', '.compiled.js');
-        jsLinter(file, eslint_config);
+        // jsLinter(file, eslint_config);
 
         jsCompiler.compile({
             file,
