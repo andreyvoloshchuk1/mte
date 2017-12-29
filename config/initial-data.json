@@ -1,5 +1,6 @@
 {
   "developers": [
+    "Andrew Kazanovsky",
     "Evgeniy Melnik",
     "Eugene Zaykov",
     "Igor Ivanov",
@@ -10,12 +11,12 @@
   "designers": [
     "Asya Artyomova",
     "Anton Kryzhanovskiy",
+    "Anastasiya Volkova",
     "Bogdan Kanilo",
     "Pavel Karpushkin",
     "Olena Dokiienko",
     "Yulia Shevchuck",
     "Daryna Skulska",
-    "Anastasiya Volkova",
     "Galyna Spivak"
   ],
   "managers": [
@@ -27,6 +28,6 @@
     "Mariia Poliakova"
   ],
   "cycle": ["C1", "C2"],
-  "years": ["17", "18", "19"],
+  "years": ["18", "19"],
   "lang": ["RUS", "UKR"]
 }
