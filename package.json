@@ -1,6 +1,6 @@
 {
   "name": "mte",
-  "version": "0.1.14",
+  "version": "0.2.0",
   "description": "mitouch template engine",
   "preferGlobal": true,
   "bin": {
@@ -35,12 +35,12 @@
     "git-clone": "^0.1.0",
     "inquirer": "^6.0.0",
     "log-symbols": "^2.1.0",
+    "nightmare": "^3.0.1",
     "node-sass": "^4.9.2",
     "npm": "^6.1.0",
     "postcss": "^6.0.23",
     "progress": "^2.0.0",
-    "resize-img": "^1.1.2",
-    "shelljs": "^0.8.2",
-    "webshot": "^0.18.0"
+    "sharp": "^0.20.5",
+    "shelljs": "^0.8.2"
   }
 }
