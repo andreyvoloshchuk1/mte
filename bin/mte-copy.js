@@ -15,8 +15,8 @@ const paths = config.paths;
  */
 
 commander
-    .option('-F, --from [from-path]', 'copy some file of directory')
-    .option('-T, --to [to-path]', 'to necessary slides in project')
+    .option('-F, --from [from-thumb]', 'copy some file of directory')
+    .option('-T, --to [to-thumb]', 'to necessary slides in project')
     .option('--filter [filter]', 'filter')
     .parse(process.argv);
 
@@ -72,7 +72,7 @@ async function getPaths(type) {
         } else {
             to = await new fsui({
                 startPath: paths.currSlides,
-                message: 'Select the path pattern to copy (select directory)',
+                message: 'Select the thumb pattern to copy (select directory)',
                 isolate: true
             });
 

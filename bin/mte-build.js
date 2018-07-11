@@ -109,21 +109,12 @@ function build(slides) {
 
   new thumbMaker(slides, thumbsSettings)
     .run()
-    .then(res => {
+    .then(() => {
       archiveMaker(slides)
         .then(() => {
           console.log('\nBuild complete.');
-          process.exit(0)
         })
         .catch(err => console.log(err));
     })
     .catch(err => console.log(err));
-}
-
-function clearBuildDir() {
-  const contents = methods.getContent(paths.currBuild);
-
-  contents.forEach(content => {
-    methods.rmDir(path.resolve(paths.currentPath, paths.currBuild), content)
-  })
 }
