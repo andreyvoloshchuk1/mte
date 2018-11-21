@@ -1,5 +1,5 @@
 {
-  "name": "mte",
+  "name": "mteipad",
   "version": "0.2.0",
   "description": "mitouch template engine",
   "preferGlobal": true,
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elevenfloor/mte.git"
+    "url": "git+https://github.com/andreyvoloshchuk1/mte"
   },
   "main": "index.js",
   "scripts": {},

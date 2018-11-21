@@ -20,8 +20,8 @@ const thumbsSettings = {
   name: '200x150',
   format: 'jpg',
   screenSize: {
-    width: 1280,
-    height: 720,
+    width: 1024,
+    height: 768,
   },
   thumbSize: {
     width: 200,
